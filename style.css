@@ -346,3 +346,5 @@ main {
 }
 .subtitle{margin:.15rem 0 0;color:#f5f9ff;opacity:.85;font-size:1rem}
 .header-brand{flex-wrap:wrap}
+.subtitle span{display:block}.subtitle small{display:block;margin-top:.2rem;font-size:.8rem;opacity:.8}
+.subtitle{text-align:center;max-width:36rem}

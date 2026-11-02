@@ -5,7 +5,7 @@ window.Games = window.Games || {};
   const _who = (document.documentElement.dataset.who || '').toLowerCase();
   const NAMES = { milo: 'Milo', jonah: 'Jonah', 'lio-levi': 'Lio und Levi' };
   const STORAGE_KEY = 'adv2026-won' + (NAMES[_who] && _who !== 'milo' ? '-' + _who : '');
-  if (NAMES[_who]) { const el = document.getElementById('subtitle'); if (el) { el.textContent = 'für ' + NAMES[_who]; el.hidden = false; } }
+  if (NAMES[_who]) { const el = document.getElementById('subtitle'); if (el) { el.innerHTML = ''; const l1 = document.createElement('span'); l1.textContent = 'Lisa und André wünschen ' + NAMES[_who] + ' eine schöne Adventszeit'; const l2 = document.createElement('small'); l2.textContent = '(Diese Spiele werden nicht von der Bildschirmzeit abgezogen)'; el.append(l1, l2); el.hidden = false; } }
   const _qp = new URLSearchParams(window.location.search);
   const _tv = _qp.get('test') ?? _qp.get('preview');
   const isPreview = _tv !== null && _tv !== '0' && _tv !== 'false';
