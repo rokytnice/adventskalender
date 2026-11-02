@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de" data-variant="raetsel" data-who="jonah">
+<head>
+  <base href="../">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventskalender</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <canvas id="snow-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <header>
+    <div class="header-brand">
+      <img src="../assets/discodogs-logo-dark.png" alt="Discodogs" class="header-logo">
+      <h1 class="sr-only">Adventskalender</h1>
+      <p id="subtitle" class="subtitle" hidden></p>
+    </div>
+    <p class="edition">🧩 Rätsel &amp; Knobel-Edition</p>
+    <div class="progress-bar" id="progress-display">0/24 gelöst</div>
+  </header>
+
+  <div id="countdown-banner" class="countdown-banner hidden"></div>
+
+  <main>
+    <div class="calendar-grid" id="calendar-grid"></div>
+  </main>
+
+  <div id="modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title">Türchen</h2>
+        <button id="modal-close" class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-hint" class="modal-hint hidden"></div>
+        <div id="game-root"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="../app.js"></script>
+  <script src="games/day01.js" onerror="this.remove()"></script>
+  <script src="games/day02.js" onerror="this.remove()"></script>
+  <script src="games/day03.js" onerror="this.remove()"></script>
+  <script src="games/day04.js" onerror="this.remove()"></script>
+  <script src="games/day05.js" onerror="this.remove()"></script>
+  <script src="games/day06.js" onerror="this.remove()"></script>
+  <script src="games/day07.js" onerror="this.remove()"></script>
+  <script src="games/day08.js" onerror="this.remove()"></script>
+  <script src="games/day09.js" onerror="this.remove()"></script>
+  <script src="games/day10.js" onerror="this.remove()"></script>
+  <script src="games/day11.js" onerror="this.remove()"></script>
+  <script src="games/day12.js" onerror="this.remove()"></script>
+  <script src="games/day13.js" onerror="this.remove()"></script>
+  <script src="games/day14.js" onerror="this.remove()"></script>
+  <script src="games/day15.js" onerror="this.remove()"></script>
+  <script src="games/day16.js" onerror="this.remove()"></script>
+  <script src="games/day17.js" onerror="this.remove()"></script>
+  <script src="games/day18.js" onerror="this.remove()"></script>
+  <script src="games/day19.js" onerror="this.remove()"></script>
+  <script src="games/day20.js" onerror="this.remove()"></script>
+  <script src="games/day21.js" onerror="this.remove()"></script>
+  <script src="games/day22.js" onerror="this.remove()"></script>
+  <script src="games/day23.js" onerror="this.remove()"></script>
+  <script src="games/day24.js" onerror="this.remove()"></script>
+</body>
+</html>

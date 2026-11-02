@@ -351,3 +351,4 @@ main {
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .subtitle span{color:var(--gold);font-size:clamp(1.3rem,3.6vw,2.2rem);font-weight:700;line-height:1.25;text-shadow:0 0 10px rgba(244,196,48,.3)}
 .subtitle small{color:var(--snow,#f5f9ff)}
+.edition{margin:.4rem 0 0;color:var(--gold);font-weight:600;letter-spacing:.03em}
