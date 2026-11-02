@@ -4,12 +4,9 @@ window.Games = window.Games || {};
   const TOTAL_DAYS = 24;
   const STORAGE_KEY = 'adv2026-won';
   const _qp = new URLSearchParams(window.location.search);
-  let isPreview = false;
-  try {
-    const v = _qp.get('test') ?? _qp.get('preview');
-    if (v !== null) { if (v === '0' || v === 'false') localStorage.removeItem('adv2026-test'); else localStorage.setItem('adv2026-test', '1'); }
-    isPreview = localStorage.getItem('adv2026-test') === '1';
-  } catch (e) { const v = _qp.get('test') ?? _qp.get('preview'); isPreview = v !== null && v !== '0' && v !== 'false'; }
+  const _tv = _qp.get('test') ?? _qp.get('preview');
+  const isPreview = _tv !== null && _tv !== '0' && _tv !== 'false';
+  try { localStorage.removeItem('adv2026-test'); } catch (e) {}
   
   let wonSet = new Set();
   let lastFocusedElement = null;
