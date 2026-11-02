@@ -3,7 +3,8 @@ window.Games = window.Games || {};
 (function () {
   const TOTAL_DAYS = 24;
   const STORAGE_KEY = 'adv2026-won';
-  const isPreview = new URLSearchParams(window.location.search).get('preview') === '1';
+  const _qp = new URLSearchParams(window.location.search);
+  const isPreview = ['preview','test'].some(k => { const v = _qp.get(k); return v !== null && v !== '0' && v !== 'false'; });
   
   let wonSet = new Set();
   let lastFocusedElement = null;
