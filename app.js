@@ -2,7 +2,10 @@ window.Games = window.Games || {};
 
 (function () {
   const TOTAL_DAYS = 24;
-  const STORAGE_KEY = 'adv2026-won';
+  const _who = (new URLSearchParams(location.search).get('für') || new URLSearchParams(location.search).get('fuer') || new URLSearchParams(location.search).get('for') || '').toLowerCase();
+  const NAMES = { milo: 'Milo', jonah: 'Jonah', 'lio-levi': 'Lio und Levi' };
+  const STORAGE_KEY = 'adv2026-won' + (NAMES[_who] && _who !== 'milo' ? '-' + _who : '');
+  if (NAMES[_who]) { const el = document.getElementById('subtitle'); if (el) { el.textContent = 'für ' + NAMES[_who]; el.hidden = false; } }
   const _qp = new URLSearchParams(window.location.search);
   const _tv = _qp.get('test') ?? _qp.get('preview');
   const isPreview = _tv !== null && _tv !== '0' && _tv !== 'false';
